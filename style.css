@@ -1,0 +1,171 @@
+@font-face {
+    font-family: yearsAndDate;
+    src: url(./assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+@font-face {
+    font-family: input;
+    src: url(./assets/fonts/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: label;
+    src: url(./assets/fonts/Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: error;
+    src: url(./assets/fonts/Poppins-Italic.ttf);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    height: 100svh;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    background-color: hsl(0, 0%, 94%);
+}
+
+.calculatorBorder{
+    padding: 2.5rem;
+    border-radius: 1rem 1rem 7rem 1rem;
+    background-color: hsl(0, 0%, 100%);
+    width: 33rem;
+    /* transition: all 0.5s ease-in-out; */
+}
+
+.inputSection{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.inputSection div{
+    display: grid;
+}
+
+label{
+    font-size: 0.6rem;
+    font-family: label;
+    color: hsl(0, 0%, 8%);
+}
+p{
+    font-size: 0.6rem;
+    font-family: error;
+    color: hsl(0, 100%, 67%);
+}
+input{
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    width: 7rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: 1px solid hsl(0, 0%, 86%);
+    font-size: 1rem;
+    font-family: input;
+}
+input:hover{
+    cursor: pointer;
+    border: 1px solid hsl(259, 100%, 65%);
+}
+input::placeholder{
+    opacity: 70%;
+}
+
+.buttonSection{
+    display: flex;
+    align-items: center;
+    margin-top: 0.7rem;
+}
+hr{
+    border: 1px solid hsl(0, 0%, 86%);
+    width: 100%;
+    outline: none;
+}
+button{
+    border-radius: 50%;
+    background-color: hsl(259, 100%, 65%);
+    border: none;
+    padding: 0.6rem;
+}
+button:hover{
+    cursor: pointer;
+    background-color: hsl(0, 0%, 8%);
+}
+
+.resultSection span{
+    display: flex;
+    line-height: 4rem;
+}
+.resultSection span h1{
+    font-size: 4rem;
+    font-family: yearsAndDate;
+}
+.yearsResult, .monthsResult, .daysResult{
+    color: hsl(259, 100%, 65%);
+}
+
+.attribution { font-size: 0.8rem; text-align: center; margin-top: 1rem;; font-family: label;}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 600px) {
+    .calculatorBorder{
+        padding: 1.8rem;
+        width: 25rem;
+    }
+    label{
+        font-size: 0.5rem;
+    }
+    p{
+        font-size: 0.5rem;
+    }
+    input{
+        padding: 0.6rem;
+        width: 6.5rem;
+        font-size: 0.8rem;
+    }
+    .resultSection span h1{
+        font-size: 3rem;
+    }
+    .resultSection span{
+        line-height: 3.5rem;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .calculatorBorder{
+        padding: 1.5rem;
+        width: 21rem;
+    }
+    input{
+        padding: 0.5rem;
+        width: 5.5rem;
+        font-size: 0.7rem;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .calculatorBorder{
+        width: 19rem;
+    }
+    input{
+        width: 4.5rem;
+    }
+    .buttonSection{
+        justify-content: center;
+        margin: 1.5rem 0;
+    }
+    button{
+        padding: 0.4rem;
+        position: absolute;
+        
+    }
+    .resultSection span h1{
+        font-size: 2.5rem;
+    }
+    .resultSection span{
+        line-height: 3rem;
+    }
+    .attribution { font-size: 0.7rem;}
+}
