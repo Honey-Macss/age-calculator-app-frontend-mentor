@@ -8,9 +8,6 @@ let yearsResult = document.getElementsByClassName("yearsResult")[0];
 let monthsResult = document.getElementsByClassName("monthsResult")[0];
 let daysResult = document.getElementsByClassName("daysResult")[0];
 
-
-
-
 const btn = document.querySelector("button");
 btn.addEventListener("click", (e) => {
     // preventing the page from automatically reloading after clicking on the button
@@ -23,6 +20,7 @@ btn.addEventListener("click", (e) => {
     const presentMonth = present.getMonth() +1;
     const presentDay = present.getDate()
 
+    // all inputs at once and looping through them
     const inputs = document.querySelectorAll("input")
     inputs.forEach((i) => {
         // the "+" is used to make the i.value a string, if you do not want to make use of "+", 
@@ -90,6 +88,4 @@ btn.addEventListener("click", (e) => {
             presentYear = presentYear - 1
         }
     } 
-    console.log(validator);
-
 })
